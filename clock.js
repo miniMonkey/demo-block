@@ -76,7 +76,7 @@ function updateBalls() {
 
 		if (balls[i].y >= WINDOW_HEIGHT - RAIDUS) {
 			balls[i].y = WINDOW_HEIGHT - RAIDUS;
-			balls[i].vy = - balls[i].vy * 0.75;
+			balls[i].vy = - balls[i].vy * 0.7;
 		}
 
 		if (balls[i].x >= WINDOW_WIDTH - RAIDUS) {
@@ -92,7 +92,7 @@ function updateBalls() {
  		}
  	}
 
- 	while(balls.length > Math.min(700, cnt)) {
+ 	while(balls.length > 700) {
  		balls.pop();
  	}
 }
@@ -105,7 +105,7 @@ function addBalls(x, y, num) {
 					x: x + j * 2 * (RAIDUS + 1) + (RAIDUS + 1), // 起始X
 					y: y + i * 2 * (RAIDUS + 1) + (RAIDUS + 1), // 起始Y
 					g: 1.5 + Math.random(), // 加速度
-					vx: Math.pow(-1, Math.ceil(Math.random()*1000)) * 4, // 随机正负4
+					vx: Math.pow(-1, Math.ceil(Math.random()*1000)) * 5, // 随机正负5
 					vy: -5,
 					color: colors[Math.floor(Math.random() * colors.length)]
 				}
