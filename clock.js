@@ -92,7 +92,7 @@ function updateBalls() {
  		}
  	}
 
- 	while(balls.length > 700) {
+ 	while(balls.length > cnt) {
  		balls.pop();
  	}
 }
