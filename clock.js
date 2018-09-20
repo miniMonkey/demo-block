@@ -76,12 +76,12 @@ function updateBalls() {
 
 		if (balls[i].y >= WINDOW_HEIGHT - RAIDUS) {
 			balls[i].y = WINDOW_HEIGHT - RAIDUS;
-			balls[i].vy = - balls[i].vy * 0.7;
+			balls[i].vy = -balls[i].vy * 0.7;
 		}
 
 		if (balls[i].x >= WINDOW_WIDTH - RAIDUS) {
 			balls[i].x = WINDOW_WIDTH - RAIDUS;
-			balls[i].vx = - balls[i].vx;
+			balls[i].vx = -balls[i].vx;
 		}
  	}
 
