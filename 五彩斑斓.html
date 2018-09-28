@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>五彩斑斓</title>
+</head>
+<body>
+	<canvas id="canvas" style="display: block;margin: 50px auto">
+		当前浏览器不支持Canvas, 请更换浏览器后再试
+	</canvas>
+	<script type="text/javascript">
+		window.onload = function() {
+			var canvas = document.getElementById("canvas");
+			var context = canvas.getContext('2d');
+
+			canvas.width = 1200;
+			canvas.height = 800;
+
+			context.globalAlpha = 0.7;
+
+			for (var i = 0; i < 100; i++) {
+				var R = Math.floor(Math.random() * 255);
+				var G = Math.floor(Math.random() * 255);
+				var B = Math.floor(Math.random() * 255);
+				context.fillStyle = 'rgb(' + R + ',' + G + ',' + B + ')';
+
+				context.beginPath();
+				context.arc(Math.random() * canvas.width, Math.random() * canvas.height, Math.random() * 70, 0, Math.PI * 2);
+				context.fill();
+			}
+		}
+	</script>
+</body>
+</html>
